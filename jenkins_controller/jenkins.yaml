@@ -1,0 +1,14 @@
+jenkins:
+  authorizationStrategy:
+    globalMatrix:
+      entries:
+      - user:
+          name: "panda"
+          permissions:
+          - "Overall/Administer"
+  securityRealm:
+    local:
+      users:
+      - id: "panda"
+        name: "panda"
+        password: "panda"
