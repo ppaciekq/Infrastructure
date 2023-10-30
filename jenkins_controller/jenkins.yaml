@@ -18,6 +18,15 @@ unclassified:
   locale:
     ignoreAcceptLanguage: true
     systemLocale: "en_US"
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - name: "SonarQube"
+      serverUrl: "http://192.168.44.44:9000"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false
+tool:
   sonarRunnerInstallation:
     installations:
     - name: "SonarScanner"
@@ -26,8 +35,3 @@ unclassified:
           installers:
           - sonarRunnerInstaller:
               id: "5.0.1.3006"
-  sonarGlobalConfiguration:
-    buildWrapperEnabled: true
-    installations:
-    - name: "SonarQube"
-      serverUrl: "http://192.168.44.44:9000"
