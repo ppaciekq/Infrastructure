@@ -12,3 +12,22 @@ jenkins:
       - id: "panda"
         name: "panda"
         password: "panda"
+unclassified:
+  location:
+    url: "http://192.168.44.44:8880/"
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "en_US"
+  sonarRunnerInstallation:
+    installations:
+    - name: "SonarScanner"
+      properties:
+      - installSource:
+          installers:
+          - sonarRunnerInstaller:
+              id: "5.0.1.3006"
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - name: "SonarQube"
+      serverUrl: "http://192.168.44.44:9000"
