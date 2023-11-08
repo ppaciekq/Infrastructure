@@ -13,6 +13,18 @@ jenkins:
       - id: "panda"
         name: "panda"
         password: "panda"
+  nodes:
+  - permanent:
+      labelString: "agent"
+      launcher:
+        ssh:
+          credentialsId: "jenkins_agent"
+          host: "192.168.44.44"
+          port: 2222
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent"
+      remoteFS: "/home/jenkins/agent"
+      retentionStrategy: "always"
 unclassified:
   location:
     url: "http://192.168.44.44:8880/"
@@ -75,3 +87,8 @@ credentials:
                 -----END RSA PRIVATE KEY-----
           scope: GLOBAL
           username: "jenkins"
+      - usernamePassword:
+          id: "artifactory"
+          password: "{AQAAABAAAAAQePMbgfSkKDbocLIU8BO3yzGcF+q2aX+ka47ebdhDtjI=}"
+          scope: GLOBAL
+          username: "admin"
