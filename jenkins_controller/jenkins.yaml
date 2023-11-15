@@ -89,6 +89,6 @@ credentials:
           username: "jenkins"
       - usernamePassword:
           id: "artifactory"
-          password: "{AQAAABAAAAAQePMbgfSkKDbocLIU8BO3yzGcF+q2aX+ka47ebdhDtjI=}"
+          password: "password"
           scope: GLOBAL
           username: "admin"
