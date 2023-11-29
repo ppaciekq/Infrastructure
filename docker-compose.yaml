@@ -25,7 +25,7 @@ services:
     restart: always
 
   jenkins_agent:
-    build: /home/panda/repo/Infrastructure/jenkins_agent
+    build: jenkins_agent
     container_name: jenkins_agent
     depends_on:
       - jenkins
