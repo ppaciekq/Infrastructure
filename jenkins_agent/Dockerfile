@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     unzip \
-    git
-	software-properties-common
+    git \
+    software-properties-common
 
 RUN groupadd -g 997 docker && usermod -aG docker jenkins
 
