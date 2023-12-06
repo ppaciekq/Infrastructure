@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     unzip \
     git
+	software-properties-common
 
 RUN groupadd -g 997 docker && usermod -aG docker jenkins
 
@@ -17,3 +18,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install
 
 RUN curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
+RUN apt-add-repository --yes --update ppa:ansible/ansible && \
+    apt-get update && \
+    apt-get install -y ansible
